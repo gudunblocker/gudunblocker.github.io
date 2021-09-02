@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+button {
+	color: white;
+    background-color: black;
+  	border-width: 1px;
+}
+input {
+	color: white;
+    background-color: black;
+    border-width: 3px;
+}
+.left {
+    display: block;
+    text-align: right;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    line-height: 0px;
+}
+</style>
+</head>
+<body id="thing">
+<a href="#" class="left" onclick="changeMode()">change mode</a>
+<iframe src="https://babben.se" id="kid" frameborder="0" allowfullscreen style="position:absolute;top:60;left:0;width:100%;height:100%;"></iframe><input value="babben.se" id="inputdady" style="position:aboslute;top:100;"></input><br><button onclick="changeShit()">click me to fucking change!</button>
+<script>
+// CHANGE THE FUCKING SHIT
+document.body.style.backgroundColor = "black";
+function changeShit() {
+	val = document.getElementById("inputdady").value;
+    if (! val.startsWith("https://")) { val = "https://" + val; }
+    document.getElementById("kid").src = val;
+}
+function changeMode() {
+	if (document.body.style.backgroundColor == "black") {
+    	document.body.style.backgroundColor = "white";
+    } else {
+        document.body.style.backgroundColor = "black";
+
+    }
+}
+</script>
+</body>
+</html>
